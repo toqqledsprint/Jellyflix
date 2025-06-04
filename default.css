@@ -1,32 +1,31 @@
-/* === JELLYFLIX+ === */
+/* === JELLYFLIX+ (Rot Theme) === */
 /* Modern Netflix-like theme for Jellyfin */
 
-/* Base background */
-body,
-html {
-    background-color: #141414 !important;
-    color: #ffffff;
+/* Grundfarben */
+:root {
+    --accent-color: #e50914;
+    --button-color: #e50914;
+    --text-light: #ffffff;
+    --bg-dark: #141414;
 }
 
-/* Header/Navbar */
+/* Hintergrund & Text */
+body,
+html {
+    background-color: var(--bg-dark) !important;
+    color: var(--text-light);
+}
+
+/* Header */
 .skinHeader {
     background: rgba(20, 20, 20, 0.95) !important;
     border-bottom: 1px solid #333;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.headerTop {
-    padding: 0.6rem 2rem;
-}
-
-/* Logo and top menu */
 .headerLogo {
     filter: brightness(200%);
     height: 40px;
-}
-
-.headerTabs {
-    font-weight: 500;
 }
 
 .headerTabs .headerTabButton {
@@ -34,23 +33,23 @@ html {
     padding: 0.6rem 1rem;
     transition: color 0.2s ease;
 }
-.headerTabs .headerTabButton:hover {
-    color: #e50914 !important;
+.headerTabs .headerTabButton:hover,
+.headerTabButton.headerTabButton-selected {
+    color: var(--accent-color) !important;
 }
 
-/* Highlighted buttons */
+/* Buttons */
 .button-flat, .emby-button {
-    background-color: #e50914 !important;
+    background-color: var(--button-color) !important;
     color: white !important;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
-
 .button-flat:hover, .emby-button:hover {
     background-color: #b00610 !important;
 }
 
-/* Item cards */
+/* Karten / Poster */
 .card, .listItem {
     background: none !important;
     border-radius: 8px !important;
@@ -61,55 +60,52 @@ html {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
-/* Poster images */
 .cardImageContainer {
     border-radius: 8px !important;
     overflow: hidden;
 }
 
-/* Titles */
+/* Titel */
 .itemName, .listItemBodyText {
     font-weight: 600;
     font-size: 1rem;
-    color: #ffffff !important;
+    color: var(--text-light) !important;
 }
 
-/* Section headers */
+/* Sektionen */
 .sectionTitle {
     font-size: 1.4rem;
     font-weight: bold;
-    color: #fff;
-    border-left: 4px solid #e50914;
+    color: var(--text-light);
+    border-left: 4px solid var(--accent-color);
     padding-left: 10px;
     margin-bottom: 1rem;
 }
 
-/* Playback page */
+/* Wiedergabeseite */
 .nowPlayingPage {
     background-color: #000 !important;
 }
-
 .nowPlayingPage .itemName {
     font-size: 2rem;
     font-weight: bold;
 }
 
-/* Scrollbars (optional) */
+/* Scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #e50914;
+    background: var(--accent-color);
     border-radius: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #141414;
+    background: var(--bg-dark);
 }
 
-/* Responsive tweaks */
+/* Mobil */
 @media (max-width: 768px) {
     .headerTabs {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
