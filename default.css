@@ -1,7 +1,6 @@
-/* === JELLYFLIX+ (Rot Theme) === */
-/* Modern Netflix-like theme for Jellyfin */
+/* === JELLYFLIX+ FULL THEME (ROT) === */
+/* Netflix-ähnliches Skin für Jellyfin inkl. "Als Nächstes"-Entfernung */
 
-/* Grundfarben */
 :root {
     --accent-color: #e50914;
     --button-color: #e50914;
@@ -9,14 +8,14 @@
     --bg-dark: #141414;
 }
 
-/* Hintergrund & Text */
+/* Hintergrund & Grundtext */
 body,
 html {
     background-color: var(--bg-dark) !important;
     color: var(--text-light);
 }
 
-/* Header */
+/* Header-Leiste */
 .skinHeader {
     background: rgba(20, 20, 20, 0.95) !important;
     border-bottom: 1px solid #333;
@@ -72,7 +71,7 @@ html {
     color: var(--text-light) !important;
 }
 
-/* Sektionen */
+/* Sektionstitel */
 .sectionTitle {
     font-size: 1.4rem;
     font-weight: bold;
@@ -91,7 +90,7 @@ html {
     font-weight: bold;
 }
 
-/* Scrollbar */
+/* Scrollbars */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -103,7 +102,7 @@ html {
     background: var(--bg-dark);
 }
 
-/* Mobil */
+/* Mobilanpassungen */
 @media (max-width: 768px) {
     .headerTabs {
         flex-wrap: wrap;
@@ -117,4 +116,18 @@ html {
     .itemName {
         font-size: 0.95rem;
     }
+}
+
+/* === "Als Nächstes" deaktivieren === */
+.nextUpSection,
+.nextUpCard,
+.upNextSection,
+.upNextDialog,
+.detailImageContainer + .verticalSection {
+    display: none !important;
+}
+
+/* Optional: entfernt evtl. erste Startbildschirmsektion ("Als Nächstes") */
+.sections .section0 {
+    display: none !important;
 }
