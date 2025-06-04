@@ -1,0 +1,124 @@
+/* === JELLYFLIX+ === */
+/* Modern Netflix-like theme for Jellyfin */
+
+/* Base background */
+body,
+html {
+    background-color: #141414 !important;
+    color: #ffffff;
+}
+
+/* Header/Navbar */
+.skinHeader {
+    background: rgba(20, 20, 20, 0.95) !important;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.headerTop {
+    padding: 0.6rem 2rem;
+}
+
+/* Logo and top menu */
+.headerLogo {
+    filter: brightness(200%);
+    height: 40px;
+}
+
+.headerTabs {
+    font-weight: 500;
+}
+
+.headerTabs .headerTabButton {
+    color: #fff !important;
+    padding: 0.6rem 1rem;
+    transition: color 0.2s ease;
+}
+.headerTabs .headerTabButton:hover {
+    color: #e50914 !important;
+}
+
+/* Highlighted buttons */
+.button-flat, .emby-button {
+    background-color: #e50914 !important;
+    color: white !important;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button-flat:hover, .emby-button:hover {
+    background-color: #b00610 !important;
+}
+
+/* Item cards */
+.card, .listItem {
+    background: none !important;
+    border-radius: 8px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover, .listItem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Poster images */
+.cardImageContainer {
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+/* Titles */
+.itemName, .listItemBodyText {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #ffffff !important;
+}
+
+/* Section headers */
+.sectionTitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #fff;
+    border-left: 4px solid #e50914;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Playback page */
+.nowPlayingPage {
+    background-color: #000 !important;
+}
+
+.nowPlayingPage .itemName {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Scrollbars (optional) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #141414;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .headerTabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        margin: 0.5rem 0;
+    }
+
+    .itemName {
+        font-size: 0.95rem;
+    }
+}
