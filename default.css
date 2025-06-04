@@ -131,3 +131,27 @@ html {
 .sections .section0 {
     display: none !important;
 }
+/* === JELLYFLIX+ | "Als Nächstes" AUS === */
+
+/* Alle bekannten Varianten von "Als Nächstes" ausblenden */
+.nextUpSection,
+.upNextSection,
+.upNextDialog,
+.nextUpCard,
+.upNext,
+.nextUpItemsContainer,
+.nextUpItems,
+.nextUpItems .card,
+.nextUpItems .sectionTitle,
+.section0, /* Startbildschirm-Erste-Sektion (falls "Als Nächstes") */
+.detailPageWrapper .verticalSection,
+.detailPageWrapper .verticalSection .sectionTitle,
+.itemsContainer .nextUpItems,
+.itemsContainer .upNextItems,
+.itemsContainer .nextUpCard {
+    display: none !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
