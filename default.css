@@ -1,83 +1,108 @@
-/* Grundlayout: dunkler Hintergrund */
+/* === Grundfarben & Stil === */
 :root {
   --background-color: #0a0a0a;
-  --card-background: #1a1a1a;
-  --highlight-color: #ffffff;
-  --accent-color: #a855f7; /* RTL+ Lila */
-  --muted-color: #999;
-  --button-hover: #333;
+  --card-background: #1c1c1c;
+  --accent-color: #b122e0; /* RTL+ Lila */
+  --text-color: #ffffff;
+  --muted-color: #aaaaaa;
   --border-radius: 12px;
+  --card-shadow: 0 4px 16px rgba(0,0,0,0.8);
 }
 
-/* Seitenhintergrund */
-body, .mainAnimatedPages, .page, .dialog {
+/* === Hintergrund & Text === */
+body,
+.mainAnimatedPages,
+.page {
   background-color: var(--background-color) !important;
-  color: var(--highlight-color) !important;
+  color: var(--text-color) !important;
 }
 
-/* Titelbereich */
-.pageTitleWithLogo, .sectionTitle {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--highlight-color);
-  margin: 20px 0;
+/* === Headerbereich (mit großem Bild) === */
+.detailImageContainer {
+  background: linear-gradient(to right, #0a0a0a 50%, transparent),
+              url('https://DEIN-HEADER-BILD') center/cover no-repeat;
+  min-height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
 }
-
-/* Serien-Header-Bereich */
-.detailImageContainer .cardContent {
-  background-color: transparent !important;
-}
-.detailLogo {
-  max-height: 80px;
-  filter: brightness(1.1);
-}
-
-/* Beschreibung und Infos */
-.overview, .infoWrapper, .mediaInfoContent {
-  color: var(--muted-color);
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-/* Staffelauswahl */
-.selectContainer select {
-  background-color: var(--card-background);
-  color: var(--highlight-color);
+.detailImageContainer .textArea {
+  background-color: rgba(0,0,0,0.5);
+  padding: 1rem 2rem;
   border-radius: var(--border-radius);
-  border: 1px solid var(--accent-color);
-  padding: 6px 12px;
+  max-width: 40%;
 }
 
-/* Folgenliste */
+/* === Titel & Beschreibung === */
+.detailImageContainer .itemName {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+.detailImageContainer .overview {
+  color: var(--muted-color);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* === Staffel-Auswahl === */
+.selectContainer select {
+  background-color: #1a1a1a;
+  color: var(--text-color);
+  border: 1px solid var(--accent-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+/* === Episodenliste === */
+.itemsContainer,
+.verticalSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 .itemsContainer .card {
   background-color: var(--card-background);
   border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: row;
+  box-shadow: var(--card-shadow);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-  margin: 10px;
   transition: transform 0.2s ease;
 }
 .itemsContainer .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+  transform: scale(1.01);
 }
-.cardText {
-  color: var(--highlight-color);
-  font-weight: 500;
+.itemsContainer .cardImageContainer {
+  width: 240px;
+  height: 135px;
+  object-fit: cover;
+}
+.itemsContainer .cardText {
+  padding: 1rem;
+  color: var(--text-color);
+}
+.itemsContainer .cardText .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.itemsContainer .cardText .overview {
+  color: var(--muted-color);
+  font-size: 0.95rem;
 }
 
-/* Buttons */
+/* === Buttons, Icons === */
 .button-flat, .button-link {
   background-color: var(--accent-color);
   color: #fff;
+  padding: 0.5rem 1.2rem;
   border-radius: var(--border-radius);
-  padding: 8px 16px;
+  border: none;
 }
-.button-flat:hover, .button-link:hover {
-  background-color: var(--button-hover);
-}
-
-/* Icons und Filter */
-.emby-tab-button, .icon, .material-icons {
-  color: var(--accent-color) !important;
+.button-flat:hover {
+  background-color: #6d18a5;
 }
