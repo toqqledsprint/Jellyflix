@@ -1,0 +1,83 @@
+/* Grundlayout: dunkler Hintergrund */
+:root {
+  --background-color: #0a0a0a;
+  --card-background: #1a1a1a;
+  --highlight-color: #ffffff;
+  --accent-color: #a855f7; /* RTL+ Lila */
+  --muted-color: #999;
+  --button-hover: #333;
+  --border-radius: 12px;
+}
+
+/* Seitenhintergrund */
+body, .mainAnimatedPages, .page, .dialog {
+  background-color: var(--background-color) !important;
+  color: var(--highlight-color) !important;
+}
+
+/* Titelbereich */
+.pageTitleWithLogo, .sectionTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--highlight-color);
+  margin: 20px 0;
+}
+
+/* Serien-Header-Bereich */
+.detailImageContainer .cardContent {
+  background-color: transparent !important;
+}
+.detailLogo {
+  max-height: 80px;
+  filter: brightness(1.1);
+}
+
+/* Beschreibung und Infos */
+.overview, .infoWrapper, .mediaInfoContent {
+  color: var(--muted-color);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* Staffelauswahl */
+.selectContainer select {
+  background-color: var(--card-background);
+  color: var(--highlight-color);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--accent-color);
+  padding: 6px 12px;
+}
+
+/* Folgenliste */
+.itemsContainer .card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+.itemsContainer .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+}
+.cardText {
+  color: var(--highlight-color);
+  font-weight: 500;
+}
+
+/* Buttons */
+.button-flat, .button-link {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: var(--border-radius);
+  padding: 8px 16px;
+}
+.button-flat:hover, .button-link:hover {
+  background-color: var(--button-hover);
+}
+
+/* Icons und Filter */
+.emby-tab-button, .icon, .material-icons {
+  color: var(--accent-color) !important;
+}
