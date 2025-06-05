@@ -2,7 +2,7 @@
 :root {
   --background-color: #0a0a0a;
   --card-background: #1c1c1c;
-  --accent-color: #b122e0; /* RTL+ Lila */
+  --accent-color: #e03838; /* kräftiges Rot */
   --text-color: #ffffff;
   --muted-color: #aaaaaa;
   --border-radius: 12px;
@@ -104,5 +104,5 @@ body,
   border: none;
 }
 .button-flat:hover {
-  background-color: #6d18a5;
+  background-color: #a60000;
 }
